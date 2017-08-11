@@ -1,0 +1,58 @@
+body {
+	background-color: pink;
+	font-family: verdana;
+	border: 1px solid powderblue
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: red; text-align: center;
+	/*border: 3px solid orange;*/
+}
+
+p {
+	color: blue;
+	text-align:
+	p:rainbow; 
+}
+
+p:hover {
+	color: green;
+}
+
+ol {
+	text-align: left;
+} 
+
+td {
+	text-align: center;
+	display: table-cell;
+	background: white;
+	outline-color: black;
+}
+
+table {
+	display: table;
+	background: black;
+	position: 
+}
+
+.rainbow {
+ 	-webkit-animation: rainbow 1s infinite;
+}
+
+@keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+/*	Chrome, Safari, Opera
+ 	 -webkit-animation: thing
+  
+  Internet Explorer 
+  -ms-animation: 
+  
+  Standar Syntax 
+  animation:*/
