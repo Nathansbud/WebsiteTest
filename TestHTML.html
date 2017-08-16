@@ -4,17 +4,87 @@
 		<title> Henlo </title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="styles.css">
+		<script src="scripts.js"></script>
+		<audio autoplay loop>
+			<source src="data/roundabout.mp3" type="audio/mpeg">
+		</audio>
 	</head>
 
 	<body>
-		<h1> <!--style="text-align:center; color:#FF0080; font-family: arial; font-size:1000%;"--> Howdy! </h1>
+		<h1 id="start"> Howdy! </h1>
 		<h3> It's me, Zack! </h3>
-		<p> 
+
+		<!--Don't yet know how to change attribute on click-->
+
+
+		<button type="button" id="orientationButton" onClick="setOrientation();">Change Orientation (Left)</button>
+
+		<button type="button" id="lyricsButton" onClick="showSongLyrics()"; > Show Lyrics </button>
+
+		<pre id='lyrics' class="hidden_text">
+
+I'll be the roundabout
+The words will make you out 'n' out
+I spend the day your way
+Call it morning driving thru the sound and in and out the valley
+
+The music dance and sing
+They make the children really ring
+I spend the day your way
+Call it morning driving thru the sound and in and out the valley
+
+In and around the lake
+Mountains come out of the sky and they stand there
+One mile over we'll be there and we'll see you
+Ten true summers we'll be there and laughing too
+Twenty four before my love you'll see I'll be there with you
+
+I will remember you
+Your silhouette will charge the view
+Of distance atmosphere
+Call it morning driving thru the sound and even in the valley
+
+In and around the lake
+Mountains come out of the sky and they stand there
+One mile over we'll be there and we'll see you
+Ten true summers we'll be there and laughing too
+Twenty four before my love you'll see I'll be there with you
+
+Along the drifting cloud the eagle searching down on the land
+Catching the swirling wind the sailor sees the rim of the land
+The eagle's dancing wings create as weather spins out of hand
+
+Go closer hold the land feel partly no more than grains of sand
+We stand to lose all time a thousand answers by in our hand
+Next to your deeper fears we stand surrounded by a million years
+
+I'll be the roundabout
+The words will make you out 'n' out
+I'll be the roundabout
+The words will make you out 'n' out
+
+In and around the lake
+Mountains come out of the sky and they stand there
+Twenty four before my love and I'll be there
+
+I'll be the roundabout
+The words will make you out 'n' out
+You spend the day your way
+Call it morning driving thru the sound and in and out the valley
+
+In and around the lake
+Mountains come out of the sky and they stand there
+One mile over we'll be there and we'll see you
+Ten true summers we'll be there and laughing too
+Twenty four before my love you'll see I'll be there with you
+		</pre>	
+
+		<p class="butt"> 
 			Welcome to my first attempt at making a website.<br><br>
 			Here's a list of cool things you can do on this dumb website: 
-		<p>
-<!-- 		<ol>
- -->			<li> Look at Neat Text</li>
+		</p>
+		<ol>
+		<li> Look at Neat Text </li>
 			<li> <a href="#rant"> Have A Linked List </a>  </li>
 			<li> Laugh at My Stupid Joke Above </li>
 			<li><em> Have a Pretty Italicized Point </em></li>
@@ -25,40 +95,71 @@
 			<li><u>Can we? We can!</u></li> <!--also <ins>-->
 			<li> Let's get some chemical formulas: O<sub>2</sub> + H<sub>2</sub> -> 2H<sub>2</sub>O </li>
 			<li> And don't forget about math, 10<sup>2</sup> = 100 </li>
-<!-- 		</ol>
- -->		<p> So how is your day going, people?</p>
+		</ol>
+
+		<hr>
+
+		<h1 class="toc"> Table of Contents </h1>
+
+		<ul>
+			<li> <a href="#start"> Start </a> </li>
+			<li> <a href="#rant"> Rainbow </a></li>
+			<li> <a href="#forms"> Forms </a></li>
+			<li> <a href="#structure"> Structured Stuff </a> 
+				<ul>
+					<li><a href="#html"> HTML </a>
+						<ul>
+							<li> Stuff </li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#css"> CSS </a> </li>
+					<ul>
+						<li><a href="#borders"> Borders </a></li>
+						<li><a href="#classes"> Classes </a></li>
+						<li><a href="#tables"> Tables </a></li>
+					</ul>
+				</ul>
+			</li>
+		</ul>
+
+		<hr>
 
 		<h2 id="rant">Welcome to <abbr title="Bodacious Unappreciated Text Trial">Butts</abbr></h2>
 
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/16777216colors.png/220px-16777216colors.png" width="220" height="220" alt="Rainbow"> 
 
-		<marquee dir="rtl">
-			<p> ...Cute rainbow, but</p> 
-		</marquee>
+	
+		<p> Cute rainbow, but...</p> 
 
-		<marquee>
-			<p> is this one cuter? </p>
-		</marquee>
+		<p>...is this one cuter? </p>
 		
 		<img src="https://media.tenor.com/images/f3d5762ef44e35b9d3922cc0aaec7c16/tenor.gif" width="400" height="200" alt="Rainbow Gif">
 
 		<h4> Let's rate these rainbow pics: </h4>
-
+		<div style="overflow-x:auto;">
 		<table>
 			<tr>
-				<td>Images:</td>
-				<td>Picture</td>
-				<td>Gif</td>
+				<th>Images</th>
+				<th>Picture</th>
+				<th>Gif</th>
 			</tr>
 
 			<tr> 
-				<td> Rating: </td>
+				<td> Rating</td>
 				<td> 8 </td>
 				<td> 6 </td>
 			</tr>
+			<tr>
+				<td> Butts </td>
+				<td> Butts </td>
+				<td> Butts </td>
+			</tr>
 		</table>
+		</div>
 
-		<h5> Overwhelming consensus? Pic wins! Sorry, trippy gif :( </h5>
+		<h5 id="forms"> Overwhelming consensus? Pic wins! Sorry, trippy gif :( </h5>
 		<p> Please, leave your thoughts on this survey! </p>
 		<input type="text"> </input> <!--can also be just <input>-->
 		<p> Or, you can do it in secret right here, you sneakster </p>
@@ -82,18 +183,227 @@
 			<form>
 				<input type="file">
 			</form>
-		<h3>
 
-		<blockquote cite="google.com">
-			As a wise man once said...the smartest thing to do is make a blockquite right here. And then ask the person to fill out a text box. So do that.
-		</blockquote>	
-
+			<blockquote cite="google.com">
+				As a wise man once said...the smartest thing to do is make a blockquite right here. And then ask the person to fill out a text box. So do that.
+			</blockquote>	
+			
 		<textarea rows="8" cols="15"> Text box! </textarea>
 
-		<p> What's butt backwards?</p>
-		<p><bdo dir="rtl">butt</bdo></p>
+			<p> What's butt backwards?</p>
+			<p><bdo dir="rtl">butt</bdo></p>
 
-		<p> And with that, the mystery was solved. </p>
-		<big>butt</big>
+			<p> And with that, the mystery was solved. </p>
+			<big>butt</big>
+			<p id="trick"> Wanna see a magic trick? I'm sure you do.</p>
+
+		<button type="button" onClick="showText('hidden_text')"> Click This Button! </button>
+
+		<p id="hidden_text" class="hidden_text"> Wow! Wasn't that <em> magical</em>? This text just appeared out of thin air! JavaScript really is pretty rad...it seems I wasn't entirely truthful with you before, though. There was something hiding from you, right before your very eyes...</p>
+
+		<button type="button" onClick="trueButts()">Reveal Truth</button>
+
+	</h3> <!--I like the look of all of this being h3 but also <p>, dunno why things break when I turn it off though...to figure this out later!-->
+
+
+		<h1 id="structure"> Alright, let's get some dang structure in here, so I don't lose myself in this madness.</h1>
+
+		<hr>
+
+		<h2 id="html"> HTML </h2>
+
+		<p> HTML is the skeleton of things. </p>
+
+		<hr>
+
+		<h3 id="paragraphs"> Paragraphs </h3>
+
+		<p> This here is your standard paragraph. It's pretty nifty, if I do say so myself, and most text on a site will be displayed using this here fella. </p>
+
+		<p> This one is prestructured, like a poem. It maintains the way I type it, without unique spacing or line breaks. So I could, like, tell you a poem or something.
+		</p>
+
+		<pre>
+			<q>Roses are red,
+			Violets are blue,
+			Butts.</q>
+				~Zack
+		</pre>
+
+		<p> And I guess "q" is for when you're too lazy to put in some quotes?<br><br>I already sort of played with the others above, so uh...on with the show! </p>
+
+		<div class="split">
+			<p>
+				Detour! I decided to test out dividers with different styles. Verdict so far? <span style="color:red;"> Pretty handy, eh? </span>
+			</p>
+		</div>
+
+		<hr>
+
+		<h3 id="links"> Links </h3>
+
+		<p> Links are pretty radical, but you gotta make sure your links do the right thing. </p>
+
+		<a href="butts.html" target="_blank"> Butts (New Tab)</a>
+		<br>
+		<a href="butts.html" target="_self"> Butts (This Tab)</a>
+		<br>
+		<a href="butts.html" target="_parent"> Butts (Parent)</a> <!--???-->
+		<br>
+		<a href="butts.html" target="_top"> Butts (New Window)</a>
+
+		<p> Images? Those things can also be links! </p>
+		<a href="butts.html"><img src="http://www.officialpsds.com/images/thumbs/Vector-Rainbow-psd34813.png" width="261px" height="400px" alt="Butts"></a>
+
+		<hr>
+
+		<h3 id="tables"> Tables </h3>
+
+		<p> I already also did some table stuff, and it's pretty lame. Sorry, HTML, CSS, I'm like...not huge on tables. But I'll make some anyways! </p>
+
+		<table id="t01">
+			<caption> Butts! </caption>
+			<tr>
+				<th>Memes</th>
+				<th>Are</th>
+				<th>Dreams</th>
+				<th>???</th>
+			</tr>
+
+			<tr>
+				<td>¿¿¿</td>
+				<td>???</td>
+				<td>¿¿¿</td>
+				<td>???</td>
+			</tr>
+
+			<tr>
+				<td>>>></td>
+				<td><<<</td>
+				<td>>>></td>
+				<td><<<</td>
+			</tr>
+
+			<tr>
+				<td>vvvv</td>
+				<td>^^^^</td>
+				<td>vvvv</td>
+				<td>^^^^</td>
+			</tr>
+
+			<tfoot> 
+		</table>
+
+		<hr>
+
+		<h3 id="lists"> Lists </h3>
+
+		<p> I mean, we're really scraping the bottom of the barrel at this point...but damn it, have some lists! <br><br> Okay, I'mma be real with you, I already did a bunch of lists above, I have like 0% motivation to make more. Rapid fire lists! </p>
+
+		<ul style="list-style-type:square">
+			<li> List Thing! </li>
+			<li> More List Thing! </li>
+			<li> Moral? Square Bullets! </li>
+		</ul>
+		<ul style="list-style-type:circle">
+			<li> List Thing, The Sequel! </li>
+			<li> Circles! </li>
+		</ul>
+		<ul style="list-style-type:none">
+			<li> Okay, this one sucks </li>
+			<li> Who would ever make this list? </li>
+		</ul>
+
+		<ol type="1">
+			<li>Order now!</li>
+			<li>It's dumb now!</li>
+			<li>Kill me now!</li>
+		</ol>
+
+		<ol type="A">
+			<li>I'm struggling with lists</li>
+			<li>Because of Rana</li>
+			<li>He is dumb!</li>
+		</ol>
+
+		<ol type="a">
+			<li>Rana sucks</li>
+			<li>I hate Rana</li>
+			<li>If he jumped off a bridge I would not mind!</li>
+		</ol>
+
+		<ol type="I">
+			<li>Butts</li>
+			<li>Butts Butts</li>
+			<li>Butts Butts Butts</li>
+		</ol>
+
+		<ol type="i">
+			<li>These lists are made for listing</li>
+			<li>And that's just what they'll do</li>
+			<li>One of these days these lists are going to continue to exist on this page</li>
+		</ol>
+
+		<dl>
+  			<dt>Butts</dt>
+			  <dd>- Butts</dd>
+			  <dd>- Butts</dd>
+			 <dt>Butts</dt>
+			  <dd>- Butts</dd>
+			  <dd>- Butts</dd>
+		</dl>
+
+		<ul class="horizontal">
+		  <li class="horizontal"><a href="butts.html">Butts</a></li>
+		  <li class="horizontal"><a href="butts.html">Butts</a></li>
+		  <li class="horizontal"><a href="butts.html">Butts</a></li>
+		  <li class="horizontal"><a href="butts.html">Butts</a></li>
+		</ul>
+
+		<hr>
+
+		<h3 id="iframes"> IFrames </h3>
+
+		<p> The end goal is in sight, my dude. We're almost done with HTML, thank the actual lord at this point, argh! Final step? IFrames! </p>
+
+		<iframe src="butts.html" width="300" height="300" style="border:2px solid black;"></iframe>
+
+		<p><a href="butts.html" target="iframe_b"> Throwback to links, now that I actually understand them!</a></p>
+
+		<iframe src="google" width="300" height="300" style="300" style="border:2px solid black;" name="iframe_b"> </iframe> 
+
+		<br>
+
+		<button type="button" onClick="document.getElementById('date').innerHTML=Date(); document.getElementById('hidden').style.display='block'"> Magic </button>
+
+		<p id="date"> Wanna see another magic trick? </p>
+
+		<p style="display: none;" id='hidden'> Boom! Today's date! </p>
+
+
+		<h2 id="css"> CSS </h2>
+
+		<hr>
+
+
+		<h3 id="borders"> Borders </h3>
+
+		<p class="dotted"> CSS is pretty rad. I can have neat borders, and stuff. This thing? Dotted border </p>
+		<p class="mixdotted"> But this one? Mix dotted/dashed! And weird thicknesses. And it's ~colorful~ </p>
+		<p style="border-style: double;">Those ones used classes to define things, but this one just uses an inline style.</p>
+		<p style="border-style: inset;"> Remember: Border Style MUST BE DEFINED if you want to mess with other border-y things (like width/color). And order goes TOP, RIGHT, BOTTOM, LEFT (TRBL) </p>
+
+		<p style="border-style: solid;"> And if TB/RL should be =, 2 values is fine instead of four. Only four if all need their own specifications! </p>
+
+		<p class="informhighlight"> Did you know? Butts! </p>
+
+
+		<h3 id="classes"> Classes </h3>
+
+		<p class="obj"> This thing has the class 'obj' </p>
+		<small class="obj"> So does this (even though it's tiny) </small>
+		<p class="obj"> However, paragraphs with this class are defined to be gray in CSS... </p>
+		<small class="obj"> While small text? Emerald green. </small>
+		<p class="rainbow obj"> And even though this IS a paragraph, it's also defined to be a member of the 'cen' class...which is centered. Two classes at once! Take that, C++</p>
 	</body>
 </html>
