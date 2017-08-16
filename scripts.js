@@ -14,18 +14,14 @@ function showText(id) {
 
 function setOrientation() {
 	if(orientationClicked == 0) {
-		document.body.style.textAlign = "left"
-		document.getElementById('orientationButton').innerHTML = "Set Orientation (Center)"
-		orientationClicked = 1
-	} else if(orientationClicked == 1) {
 		document.body.style.textAlign = "center"
 		document.getElementById('orientationButton').innerHTML = "Set Orientation (Left)"
+		orientationClicked = 1
+	} else if(orientationClicked == 1) {
+		document.body.style.textAlign = "left"
+		document.getElementById('orientationButton').innerHTML = "Set Orientation (Center)"
 		orientationClicked = 0
 	}
-}
-
-function setOrientationLeft() {
-	document.body.style.textAlign = "left"
 }
 
 function showSongLyrics() {

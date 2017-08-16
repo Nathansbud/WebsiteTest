@@ -1,7 +1,7 @@
 body {
 	background-color: pink;
 	font-family: verdana;
-	text-align: center;
+	text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,10 +135,13 @@ li.horizontal a {
     text-decoration: none;
 }
 
-lihorizontal a:hover {
+li.horizontal a:hover {
     background-color: #111111;
 }
 
+button {
+	text-align: center;	
+}
 
 
 @keyframes rotate {

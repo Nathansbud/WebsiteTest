@@ -5,9 +5,9 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="styles.css">
 		<script src="scripts.js"></script>
-		<audio autoplay loop>
+		<!-- <audio autoplay loop>
 			<source src="data/roundabout.mp3" type="audio/mpeg">
-		</audio>
+		</audio> -->
 	</head>
 
 	<body>
@@ -104,12 +104,16 @@ Twenty four before my love you'll see I'll be there with you
 		<ul>
 			<li> <a href="#start"> Start </a> </li>
 			<li> <a href="#rant"> Rainbow </a></li>
-			<li> <a href="#forms"> Forms </a></li>
 			<li> <a href="#structure"> Structured Stuff </a> 
 				<ul>
-					<li><a href="#html"> HTML </a>
+					<li><a href="#html">HTML</a>
 						<ul>
-							<li> Stuff </li>
+							<li><a href="#paragraphs">Paragraphs</a></li>
+							<li><a href="#links">Links</a></li>
+							<li><a href="#tables">Tables</a></li>
+							<li><a href="#lists">Lists</a></li>
+							<li><a href="#iframes">Iframes</a></li>
+							<li><a href="#forms">Forms</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -128,14 +132,21 @@ Twenty four before my love you'll see I'll be there with you
 
 		<h2 id="rant">Welcome to <abbr title="Bodacious Unappreciated Text Trial">Butts</abbr></h2>
 
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/16777216colors.png/220px-16777216colors.png" width="220" height="220" alt="Rainbow"> 
+		<figure>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/16777216colors.png/220px-16777216colors.png" width="220" height="220" alt="Rainbow">
+			<figcaption> Exhibit A: Rainbow Picture </figcaption>
+		</figure>
 
 	
 		<p> Cute rainbow, but...</p> 
 
 		<p>...is this one cuter? </p>
 		
-		<img src="https://media.tenor.com/images/f3d5762ef44e35b9d3922cc0aaec7c16/tenor.gif" width="400" height="200" alt="Rainbow Gif">
+
+		<figure>
+			<img src="https://media.tenor.com/images/f3d5762ef44e35b9d3922cc0aaec7c16/tenor.gif" width="400" height="200" alt="Rainbow Gif">
+			<figcaption> Exhibit B: Rainbow Gif </figcaption>
+		</figure>
 
 		<h4> Let's rate these rainbow pics: </h4>
 		<div style="overflow-x:auto;">
@@ -159,7 +170,7 @@ Twenty four before my love you'll see I'll be there with you
 		</table>
 		</div>
 
-		<h5 id="forms"> Overwhelming consensus? Pic wins! Sorry, trippy gif :( </h5>
+		<h5 id="form"> Overwhelming consensus? Pic wins! Sorry, trippy gif :( </h5>
 		<p> Please, leave your thoughts on this survey! </p>
 		<input type="text"> </input> <!--can also be just <input>-->
 		<p> Or, you can do it in secret right here, you sneakster </p>
@@ -380,6 +391,97 @@ Twenty four before my love you'll see I'll be there with you
 
 		<p style="display: none;" id='hidden'> Boom! Today's date! </p>
 
+		<hr>
+
+		<h3 id="forms">Forms</h3>
+
+		<p> Forms! Except, like, this time they're for real! The last tutorial I was using threw them out me <em> waaaaay </em> out of left field, at a point when I was NOT ready for them. See them up above? Lame! </p>
+
+		<p> So, without further ado, now is the time to actually submit your form inputs, and stuff! </p>
+
+		<form action="submit.html" target="_blank">
+			<fieldset>
+				<legend>Satisfaction</legend>
+				Did you enjoy this site? <br>
+				<input type="radio" name="enjoyment" value="Yes">Yes<br>
+				<input type="radio" name="enjoyment" value="Totally">Totally<br>
+				<input type="radio" name="enjoyment" value="Absolutely">Absolutely<br>
+				<input type="radio" name="enjoyment" value="Butts">Butts<br>
+				<input type="submit" value="Submit">
+			</fieldset>
+		</form>
+
+		<p> Cool, thanks! Now, another question: which butt has been your favorite so far? </p>
+		<form action="butts.html" target="_blank">
+			<select name="butts">
+				<option value="butt" selected>Butt</option>
+				<option value="green_butt">Green Butt</option>
+				<option value="pink_butt">Pink Butt</option>
+				<option value="rainbow_butt">Rainbow Butt</option>
+				<option value="spinning_butt">Spinning Butt</option>
+				<option value="secret_butt">Secret Butt</option>
+				<option value="ttub">Backwards Butt</option>
+				<option value="table_butt">Table Butt</option>
+				<option value="list_butt">List Butt</option>
+				<option value="button_butt">Button Butt</option>
+				<option value="none">None</option>
+			</select>
+
+			<input type="submit" onClick="document.getElementById('post_butt').style.display='block'">
+		</form>
+
+		<div id="post_butt" class="hidden_text">
+			<form action="submit.html" target="_blank">
+				<p>Great, thanks for the feedback regarding the butts on this site! Butt wait, there's more!</p>
+
+				<textarea name="feedback" rows="10" columns="10">Please leave any other thoughts on these sites—or butts in general—here!</textarea>
+				<br>
+				<input type="submit" onclick="alert('Thanks for the feedback!')">
+			</form>
+		</div>
+
+		<p> Rapid fire forms that lead nowhere because I'm lazy! </p>
+
+		<form action="submit.html" target="_blank">
+			Favorite Color? (This one doesn't show in Safari, and it's a damn shame) <br>
+			<input type="color" name="fav_color"> <br>
+			<input type="submit" onClick="alert('Radical!')">
+		</form>
+
+		<form action="submit.html" target="_blank">
+			This content is 18+! Choose your date of birth! (Safari, come on, dawg) <br>
+			<input type="date" name="birth" max="1999-08-16"> <br>
+			<input type="submit" onClick="alert('Gnarly!')">
+		</form>
+
+		<form action="submit.html" target="_blank">
+			People who share my birth month and year are ~rad~ so totally choose that (I want to kill you, Safari) <br>
+			<input type="month" name="birth_month"> <br>
+			<input type="submit" onClick="alert('Way Cool!')">
+		</form>
+
+		<form action="submit.html" target="_blank">
+			Enter your email for our mailing address (Safari, are you KIDDING ME?) <br>
+			<input type="email" name="email"> <br>
+			<input type="submit" onClick="alert('Tubular!')">
+		</form>
+
+		<form action="butts.html" target="_blank">
+			How many butts is the optimal number on this site? (Safari...THIS is the one you choose?) <br>
+			<input type="number" name="butts_quantity" min="0" max="1000000" value="1" step="2"> <br>
+			<input type="submit" onClick="alert('Ahahah, this thing goes up to a million butts!')">
+		</form>
+
+		<br>
+
+		<form>
+			Adjust the volume or something, I guess. <br>
+			<input type="range" name="volume" min="0" max="100" value="50">
+		</form>
+
+		<p>Forms are starting to lose their luster. So is HTML as a concept, honestly. Forms are laaaame...and the main part of web design. Why'd they introduce me to, like, a billion non-form things only to load me up with Forms? Argh! Oh, and, like, there were no other important forms. AND THAT'S THE END OF HTML! TO CSS WE GOOOOO! </p>
+
+		<hr>
 
 		<h2 id="css"> CSS </h2>
 
@@ -404,6 +506,6 @@ Twenty four before my love you'll see I'll be there with you
 		<small class="obj"> So does this (even though it's tiny) </small>
 		<p class="obj"> However, paragraphs with this class are defined to be gray in CSS... </p>
 		<small class="obj"> While small text? Emerald green. </small>
-		<p class="rainbow obj"> And even though this IS a paragraph, it's also defined to be a member of the 'cen' class...which is centered. Two classes at once! Take that, C++</p>
+		<p class="rainbow obj"> And even though this IS a paragraph, it's also defined to be a member of the 'rainbow' class...which is rainbow. Two classes at once! Take that, C++</p>
 	</body>
 </html>
