@@ -1,7 +1,13 @@
+/* TO DO: FLOATS */
+
 body {
+	/*background: linear-gradient(pink, purple);*/
 	background-color: pink;
 	font-family: verdana;
 	text-align: left;
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 1.4
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,7 +27,7 @@ p.spin {
 
 
 p:hover {
-	animation: shakeme linear 0.2s infinite
+	animation: shakeme linear 0.2s infinite;
 }
 
 p.butt:after {
@@ -35,11 +41,8 @@ p.butt:before {
 	opacity: 0.5;
 }
 
-.hidden_text {
-	display: none;
-}
 
-#hidden_text {
+#hidden_text, .hidden_text {
 	display: none;
 }
 
@@ -76,6 +79,15 @@ div.split {
 	background-color: black;
 	color: white!important;
 	padding: 20px;
+}
+
+div#misc_div {
+	width: 300px;
+	border: 25px solid #89cff0;
+	background-color: #fbfbab;
+	padding: 25px;
+	margin: 25px;;
+
 }
 
 li {
@@ -115,6 +127,11 @@ table#t01 tr:nth-child(even) {
 	background-color: blue;
 }
 
+ul, ol, li {
+	list-style-position: inside;
+	padding-right: 5px;
+}
+
 ul.horizontal {
 	list-style-type: none;
 	margin: 0;
@@ -139,10 +156,114 @@ li.horizontal a:hover {
     background-color: #111111;
 }
 
+p.funky_fresh {
+	border: 5px dotted;
+	border-radius: 25px;
+	border-color: red yellow blue green;
+	border-width: thick;
+	padding: 5px;
+}
+
+p.funkier_fresh {
+	outline-style: dotted;
+	outline-color: red;
+	outline-width: thick;
+	padding: 5px;
+}
+
+p.yelling {
+	text-transform: uppercase;
+	animation: shakeme linear 0.2s infinite;
+}
+
+p.whisper {
+	text-transform: lowercase;
+}
+
+p.whisper:after {
+	content: "...shh";
+}
+
+.titles {
+	text-transform: capitalize;
+}
+
+.indented {
+	text-indent: 50px;
+}
+
+p.wide_spacing {
+	letter-spacing: 10px;
+}
+
+.mswordvibe {
+	text-shadow: 3px 2px black;
+}
+
 button {
 	text-align: center;	
 }
 
+a.nifty:link {
+	color: lime;
+}
+
+a.nifty:visited {
+	color: purple;
+}
+
+a.nifty:hover {
+	color: orange;
+}
+
+a.nifty:active {
+	color: blue;
+}
+
+a.radical:link, a.visited:link {
+	background-color: white;
+	color: black;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #663399;
+	display: inline-block;
+}
+
+a.radical:hover, a.radical:active {
+	background-color: #663399;
+	color: white;
+}
+
+div.mouse_over p {
+	display: none;
+}
+
+div.mouse_over p:first-child {
+	color: green;
+}
+
+div.mouse_over:hover p {
+	display: block;
+}
+
+q:lang(zack) {
+	quotes: "~" "~"; 
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+	background-color: lightgray;
+	border: 1px solid black;
+	transition: 0.5s;
+}
+
+.spinY {
+	animation: spinY 2s linear infinite;;
+}
+
+.spinZ {
+	animation: spinZ 2s linear infinite;;
+}
 
 @keyframes rotate {
 	0% {transform: rotate(0deg);}
@@ -168,6 +289,22 @@ button {
 	72% {color: indigo;}
 	83% {color: violet;}
 	100% {color: red;}
+}
+
+@keyframes spinY {
+	0% {transform: rotateY(0deg);}
+	25% {transform: rotateY(90deg);}
+	50% {transform: rotateY(180deg);}
+	75% {transform: rotateY(270deg);}
+	100% {transform: rotateY(360deg);}
+}
+
+@keyframes spinZ {
+	0% {transform: rotateZ(0deg);}
+	25% {transform: rotateZ(90deg);}
+	50% {transform: rotateZ(180deg);}
+	75% {transform: rotateZ(270deg);}
+	100% {transform: rotateZ(360deg);}
 }
 
 @keyframes shakeme {

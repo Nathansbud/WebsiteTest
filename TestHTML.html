@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
 	<head>
 		<title> Henlo </title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="styles.css">
 		<script src="scripts.js"></script>
-		<!-- <audio autoplay loop>
+		<audio id="song" loop>
 			<source src="data/roundabout.mp3" type="audio/mpeg">
-		</audio> -->
+		</audio>
 	</head>
 
 	<body>
@@ -17,9 +17,10 @@
 		<!--Don't yet know how to change attribute on click-->
 
 
-		<button type="button" id="orientationButton" onClick="setOrientation();">Change Orientation (Left)</button>
+		<button type="button" id="orientationButton" onClick="setOrientation();">Change Orientation (Center)</button>
 
-		<button type="button" id="lyricsButton" onClick="showSongLyrics()"; > Show Lyrics </button>
+		<button type="button" id="pauseButton" onClick="pauseSong();">Play Song</button>
+		<button type="button" id="lyricsButton" class="hidden_text" onClick="showSongLyrics();"> Show Lyrics </button>
 
 		<pre id='lyrics' class="hidden_text">
 
@@ -507,5 +508,64 @@ Twenty four before my love you'll see I'll be there with you
 		<p class="obj"> However, paragraphs with this class are defined to be gray in CSS... </p>
 		<small class="obj"> While small text? Emerald green. </small>
 		<p class="rainbow obj"> And even though this IS a paragraph, it's also defined to be a member of the 'rainbow' class...which is rainbow. Two classes at once! Take that, C++</p>
+
+		<hr>
+
+		<h3 id="outlines">Outlines</h3>
+
+		<p class="funky_fresh"> Outlines! They're, like, borders, except they're outside instead of inside. Honestly, not too much difference between the two, not gonna lie...this thing is a border, for instance. Whoops. </p>
+
+		<p class="funkier_fresh"> This one is a outline, though (outlines are a little lamer)! </p>
+
+		<hr>
+
+		<h3 id="csslinks"> Links (CSS Edition) </h3>
+
+		<p> CSS links are, like, twice as fun as HTML links, because you can make things radical. Pretty sure that's the tagline for CSS, honestly. </p>
+
+		<a href="http://www.notarealsite.com" target="_blank" class="nifty">I mean, look!</a> 
+
+		<br><br>
+
+		<a href="http://www.stillnotarealsite.com" target="_blank" class="radical">DUDE</a>
+
+		<p> More coming soon, probably </p>
+
+		<hr>
+
+		<h3 id="style">Important Style Testing</h3>
+
+		<p> This area is for testing important style stuff that doesn't necessarily deserve its own section. Like...</p>
+
+		<div class="mouse_over"> Dividers that reveal secret text on hover...
+			<p>Wabam! Gotcha!</p>
+			<p>This one? Not the first child, no green. Lame!</p>
+			<p>Unique <q lang="zack">quotes</q></p>
+		</div>
+
+		<p class="spinY"> Woooo </p>
+
+		<!-- <p class="spinZ"> Woooo! </p> -->
+
+		<h3 id="misc"> Everything Else </h3>
+
+
+		<div id="misc_div"><p>"I dunno"...I'm feeling pretty content with my HTML/CSS knowledge at the moment, and I kind of want to move into some JS stuff...so that's what I'mma do. I used most of the CSS features I needed above, I got through HTML, I'm feeling funky fresh.</p></div>
+
+		<p>So here's everything else that I felt the need to toss on here, to bloat this piece of junk even more!</p>
+
+		<p class="yelling"> I'm mad! </p>
+
+		<p class="whisper"> But now I'm calm, and everything is nice and small! I guess this is whispering, so</p>
+
+		<p class="whisper"> huehue, everything has "shh" appended to it</p>
+
+		<p class="titles"> Kanaya/Title mode! </p>
+
+		<p class="indented"> For all your essay writing needs, have a radical indented block of text. It's ~wonderful~ </p>
+
+		<p class="wide_spacing yelling"> Za warudo! </p>
+
+		<h4 class="mswordvibe"> Welcome to the Internet: 90s Edition </h4>
 	</body>
 </html>

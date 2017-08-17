@@ -1,6 +1,7 @@
 
 lyricsClicked = 0
 orientationClicked = 0
+songClicked = 0
 
 function trueButts() {
 	document.getElementById('trick').innerHTML = "Secret Butts"
@@ -21,6 +22,19 @@ function setOrientation() {
 		document.body.style.textAlign = "left"
 		document.getElementById('orientationButton').innerHTML = "Set Orientation (Center)"
 		orientationClicked = 0
+	}
+}
+
+function pauseSong() {
+	document.getElementById('lyricsButton').style.display="inline"
+	if(songClicked == 0) {
+		document.getElementById('song').play()
+		document.getElementById('pauseButton').innerHTML = "Pause Song"
+		songClicked = 1
+	} else if(songClicked == 1) {
+		document.getElementById('song').pause()
+		document.getElementById('pauseButton').innerHTML = "Play Song"
+		songClicked = 0
 	}
 }
 
