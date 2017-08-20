@@ -1,7 +1,23 @@
+var lyricsClicked = 0
+var orientationClicked = 0
+var songClicked = 0
 
-lyricsClicked = 0
-orientationClicked = 0
-songClicked = 0
+// // function clickCounter() {
+// // 	if(typeof(Storage) !== "undefined") {
+// // 		if(sessionStorage.clickcount) {
+// // 			document.getElementById('song').iplay
+// // 		}
+// // 	}
+// // }
+// if(typeof(Storage) !== "undefined") {
+//         if (localStorage.clickcount) {
+//             localStorage.clickcount = Number(localStorage.clickcount)+1;
+//         } else {
+//             localStorage.clickcount = 1;
+//         }
+//         document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+//     } else {
+//         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
 
 function trueButts() {
 	document.getElementById('trick').innerHTML = "Secret Butts"

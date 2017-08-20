@@ -7,7 +7,8 @@ body {
 	text-align: left;
 	padding-left: 30px;
 	padding-right: 30px;
-	line-height: 1.4
+	line-height: 1.4;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -220,7 +221,7 @@ a.nifty:active {
 	color: blue;
 }
 
-a.radical:link, a.visited:link {
+a.radical:link, a.radical:visited {
 	background-color: white;
 	color: black;
 	padding: 14px 25px;
@@ -233,6 +234,7 @@ a.radical:link, a.visited:link {
 a.radical:hover, a.radical:active {
 	background-color: #663399;
 	color: white;
+	transition: 1s;
 }
 
 div.mouse_over p {
@@ -252,12 +254,46 @@ q:lang(zack) {
 }
 
 input[type="text"]:focus, input[type="password"]:focus{
+
 	background-color: lightgray;
 	border: 1px solid black;
-	transition: 0.5s;
+	
+	transition: background-color 0.5s, border 1s;
+}
+
+div#delay {
+	background-color: dodgerblue;
+	border: purple;
+	color: black;
+	width: 25%;
+	height: 50px;
+	padding: 10px;
+	transition: width linear 1s , height linear 1s;
+}
+
+div#delay:hover {
+	width: 50%;
+	height: 100px;
+	transition: width 2s, height 2s;
+
+}
+
+div#delay p {
+	color: green;
+}
+
+div#delay:hover p {
+
+	transition: ;
 }
 
 .spinY {
+	text-align: center!important;
+	animation: spinY 2s linear infinite;;
+}
+
+.spinYf {
+	text-align: left!important;
 	animation: spinY 2s linear infinite;;
 }
 
@@ -265,19 +301,35 @@ input[type="text"]:focus, input[type="password"]:focus{
 	animation: spinZ 2s linear infinite;;
 }
 
-@keyframes rotate {
-	0% {transform: rotate(0deg);}
-	10% {transform: rotate(36deg);}
-	20% {transform: rotate(72deg);}
-	30% {transform: rotate(108deg);}
-	40% {transform: rotate(144deg);}
-	50% {transform: rotate(180deg);}
-	60% {transform: rotate(216deg);}
-	70% {transform: rotate(252deg);}
-	80% {transform: rotate(288deg);}
-	90% {transform: rotate(324deg);}
-	100% {transform: rotate(360deg);}
+div#marquee p {
+	position: relative;
+	display: block;
+	font-size: 200%;
+	animation: marquee 8s linear infinite;
+}
 
+/*p {
+	font-size: 300%;
+}*/
+
+@keyframes rotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+
+}
+
+@keyframes marquee {
+	0% {left: 0%;}
+	50% {left: 80%;}
+	100% {left: 0%;}
+}
+
+@keyframes square {
+    0%   {/*background-color:red; */left:0px; top:0px;}
+    25%  {/*background-color:yellow; */left:200px; top:0px;}
+    50%  {/*background-color:blue; */left:200px; top:200px;}
+    75%  {/*background-color:green; */left:0px; top:200px;}
+    100% {/*background-color:red; */left:0px; top:0px;}
 }
 
 @keyframes colorChange {
@@ -292,19 +344,30 @@ input[type="text"]:focus, input[type="password"]:focus{
 }
 
 @keyframes spinY {
-	0% {transform: rotateY(0deg);}
-	25% {transform: rotateY(90deg);}
-	50% {transform: rotateY(180deg);}
-	75% {transform: rotateY(270deg);}
-	100% {transform: rotateY(360deg);}
+	0% {transform: rotateY(0deg); }
+	17% {color: orange;}
+	33% {color: yellow;}
+	50% {color: green;}
+	67% {color: blue;}
+	72% {color: indigo;}
+	83% {color: violet;}
+	100% {transform: rotateY(360deg); color: red;}
 }
 
 @keyframes spinZ {
 	0% {transform: rotateZ(0deg);}
-	25% {transform: rotateZ(90deg);}
-	50% {transform: rotateZ(180deg);}
-	75% {transform: rotateZ(270deg);}
 	100% {transform: rotateZ(360deg);}
+}
+
+@keyframes colorChangeSpin {
+	0% {color: red;}
+	17% {color: orange;}
+	33% {color: yellow;}
+	50% {color: green;}
+	67% {color: blue;}
+	72% {color: indigo;}
+	83% {color: violet;}
+	100% {color: red;}
 }
 
 @keyframes shakeme {
